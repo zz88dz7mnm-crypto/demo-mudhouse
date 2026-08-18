@@ -26,25 +26,8 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
-    <symbol id="i-bean" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.8 2 12s4.5 10 10 10 10-4.8 10-10S17.5 2 12 2Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2c-3 3.5-3 16.5 0 20" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.1" cy="6.9" r="1.15" fill="currentColor"/></symbol>
   </svg>
-
-  <div style="background:var(--mud); color:#f3e6d6; overflow:hidden; padding:10px 0;">
-    <div data-marquee style="display:flex; width:max-content; gap:0;">
-      <div style="display:flex; gap:30px; padding-right:30px; font-family:'Inter',system-ui,sans-serif; font-weight:600; font-size:14px; letter-spacing:.01em; white-space:nowrap; align-items:center;">
-        <span>☕ Bakery &amp; Coffee en Córdoba</span><span aria-hidden="true" style="opacity:.5;">•</span>
-        <span>🍪 La carta completa de Mud Cookies</span><span aria-hidden="true" style="opacity:.5;">•</span>
-        <span>📍 Dos locales: Chacabuco e Ituzaingó</span><span aria-hidden="true" style="opacity:.5;">•</span>
-        <span>🌤️ Abierto los 7 días</span><span aria-hidden="true" style="opacity:.5;">•</span>
-      </div>
-      <div aria-hidden="true" style="display:flex; gap:30px; padding-right:30px; font-family:'Inter',system-ui,sans-serif; font-weight:600; font-size:14px; letter-spacing:.01em; white-space:nowrap; align-items:center;">
-        <span>☕ Bakery &amp; Coffee en Córdoba</span><span style="opacity:.5;">•</span>
-        <span>🍪 La carta completa de Mud Cookies</span><span style="opacity:.5;">•</span>
-        <span>📍 Dos locales: Chacabuco e Ituzaingó</span><span style="opacity:.5;">•</span>
-        <span>🌤️ Abierto los 7 días</span><span style="opacity:.5;">•</span>
-      </div>
-    </div>
-  </div>
 
   <header style="position:sticky; top:0; z-index:40; background:rgba(247,236,217,.92); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
     <div style="max-width:1240px; margin:0 auto; padding:14px clamp(16px,4vw,40px); display:flex; align-items:center; gap:clamp(12px,3vw,40px);">
@@ -57,7 +40,10 @@
         <a href="#locales" class="mh-nav-link" style="font-family:'Inter',system-ui,sans-serif; font-weight:600; font-size:15px; color:var(--ink);">Locales</a>
         <a href="#horarios" class="mh-nav-link" style="font-family:'Inter',system-ui,sans-serif; font-weight:600; font-size:15px; color:var(--ink);">Horarios</a>
       </nav>
-      <a href="#menu" class="mh-btn mh-btn-solid" style="margin-left:auto; display:inline-flex; align-items:center; gap:8px; background:var(--terracotta); color:#fff8ec; text-decoration:none; font-family:'Inter',system-ui,sans-serif; font-weight:700; font-size:14.5px; padding:11px 20px; border-radius:999px; box-shadow:0 10px 20px -8px rgba(212,119,47,.6);">
+      <a href="https://www.instagram.com/mudhouse.cba/" target="_blank" rel="noopener" aria-label="Instagram de Mudhouse" style="margin-left:auto; display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border:1.5px solid var(--line); border-radius:50%; color:var(--ink); text-decoration:none;" class="mh-ig-btn">
+        <svg width="19" height="19" aria-hidden="true" style="display:block"><use href="#i-ig"></use></svg>
+      </a>
+      <a href="#menu" class="mh-btn mh-btn-solid" style="display:inline-flex; align-items:center; gap:8px; background:var(--terracotta); color:#fff8ec; text-decoration:none; font-family:'Inter',system-ui,sans-serif; font-weight:700; font-size:14.5px; padding:11px 20px; border-radius:999px; box-shadow:0 10px 20px -8px rgba(212,119,47,.6);">
         Ver la carta
       </a>
     </div>
@@ -67,11 +53,10 @@
     <div style="max-width:1240px; margin:0 auto; padding:clamp(30px,6vw,72px) clamp(16px,4vw,40px) clamp(60px,8vw,96px); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(20px,5vw,48px); align-items:center;">
       <div data-reveal>
         <span style="display:inline-flex; align-items:center; gap:8px; background:var(--paper); border:1.5px solid var(--line); color:var(--mud); font-family:'Inter',system-ui,sans-serif; font-weight:700; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; padding:7px 14px; border-radius:999px; margin-bottom:20px;">
-          <svg width="14" height="14" aria-hidden="true"><use href="#i-bean"></use></svg>
           Café · Panadería · Cookies
         </span>
         <h1 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:clamp(42px,6.6vw,84px); line-height:0.98; letter-spacing:-0.02em; text-wrap:balance; color:var(--ink);">No es un café<br />cualquiera,<br /><em style="color:var(--terracotta-dark); font-style:italic; font-weight:500;">es Mudhouse.</em></h1>
-        <p style="margin:clamp(22px,3vw,32px) 0 0; font-size:clamp(17px,1.9vw,19px); line-height:1.6; max-width:42ch; color:#5a4634;">Café de especialidad, panadería de todos los días y la carta completa de Mud Cookies — en dos locales del centro de Córdoba.</p>
+        <p style="margin:clamp(22px,3vw,32px) 0 0; font-family:'Fraunces',Georgia,serif; font-style:italic; font-weight:500; font-size:clamp(19px,2.1vw,23px); line-height:1.5; color:var(--terracotta-dark);">Lo bueno se comparte ☕️🥐🍪</p>
         <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:clamp(28px,4vw,40px);">
           <a href="#menu" class="mh-btn mh-btn-solid" style="display:inline-flex; align-items:center; gap:10px; background:var(--terracotta); color:#fff8ec; text-decoration:none; font-family:'Inter',system-ui,sans-serif; font-weight:700; font-size:16px; padding:16px 26px; border-radius:999px; box-shadow:0 14px 26px -10px rgba(212,119,47,.6);">
             Ver la carta
@@ -83,11 +68,9 @@
 
       <div class="mh-hero-collage" style="position:relative; height:clamp(300px,34vw,460px); display:flex; align-items:center; justify-content:center;" data-reveal>
         <div aria-hidden="true" style="position:absolute; width:88%; height:88%; border-radius:50%; background:radial-gradient(circle at 34% 30%, #ecc086 0%, var(--terracotta) 55%, var(--mud) 100%); opacity:.9; filter:blur(2px);"></div>
-        <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="position:absolute; top:4%; right:12%; color:var(--mud); opacity:.55;"><use href="#i-bean"></use></svg>
-        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="position:absolute; bottom:10%; left:4%; color:var(--mud); opacity:.5;"><use href="#i-bean"></use></svg>
-        <img data-float="slow" src="assets/img/cookies/red-velvet-cream.webp" alt="Red Velvet Cream" style="position:absolute; width:34%; left:2%; top:12%; --r:-14deg; transform:rotate(-14deg); filter:drop-shadow(0 18px 22px rgba(43,24,16,.4));" />
-        <img data-float="fast" src="assets/img/cookies/pistacho-white.webp" alt="Pistacho White" style="position:absolute; width:32%; right:0; bottom:8%; --r:12deg; transform:rotate(12deg); filter:drop-shadow(0 18px 22px rgba(43,24,16,.4));" />
-        <img data-float src="assets/img/cookies/chocobomba.webp" alt="Chocobomba" style="position:relative; width:52%; --r:-4deg; transform:rotate(-4deg); filter:drop-shadow(0 26px 30px rgba(43,24,16,.45)); z-index:2;" />
+        <img data-float="slow" src="assets/img/cookies/red-velvet-cream.png" alt="Red Velvet Cream" style="position:absolute; width:34%; left:2%; top:12%; --r:-14deg; transform:rotate(-14deg); filter:drop-shadow(0 18px 22px rgba(43,24,16,.4));" />
+        <img data-float="fast" src="assets/img/cookies/pistacho-white.png" alt="Pistacho White" style="position:absolute; width:32%; right:0; bottom:8%; --r:12deg; transform:rotate(12deg); filter:drop-shadow(0 18px 22px rgba(43,24,16,.4));" />
+        <img data-float src="assets/img/cookies/chocobomba.png" alt="Chocobomba" style="position:relative; width:52%; --r:-4deg; transform:rotate(-4deg); filter:drop-shadow(0 26px 30px rgba(43,24,16,.45)); z-index:2;" />
       </div>
     </div>
 
@@ -100,7 +83,6 @@
         <img src="assets/img/logo-mudcookies.png" alt="Mud Cookies" width="140" height="78" style="display:block; width:clamp(96px,12vw,140px); height:auto; filter:drop-shadow(0 6px 10px rgba(0,0,0,.35));" />
         <div>
           <h2 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:clamp(32px,4.6vw,52px); line-height:1; letter-spacing:-0.02em; color:#fff8ec;">La carta</h2>
-          <p style="margin:6px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:15px; color:#d8c4ab;">22 sabores. Precios de mostrador, siempre al día.</p>
         </div>
       </div>
     </div>
@@ -108,16 +90,12 @@
 
   <section style="background:var(--paper);">
     <div style="max-width:1120px; margin:0 auto; padding:clamp(24px,4vw,40px) clamp(16px,4vw,40px) clamp(50px,7vw,80px);">
-      
       <div style="margin-top:clamp(46px,6vw,72px);" data-reveal>
-        <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px;">
-          <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Los clásicos</h3>
-          <p style="margin:0; font-family:'Inter',system-ui,sans-serif; font-size:14.5px; color:#8a6f56;">Las de siempre, para acertar seguro.</p>
-        </div>
-        <svg width="132" height="10" viewBox="0 0 132 10" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M2 7c10-8 20-8 30 0s20 8 30 0 20-8 30 0 20 8 38 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Los clásicos</h3>
+        <svg width="140" height="16" viewBox="0 0 140 16" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M4 10c8-8 16-8 24 0s16 8 24 0 16-8 24 0 16 8 24 0 16-8 24 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
         <div style="display:flex; flex-direction:column;">
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px;  border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/clasica.webp" alt="Cookie Clásica" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/clasica.png" alt="Cookie Clásica" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Clásica</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate negro.</p>
@@ -125,7 +103,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/nutella.webp" alt="Cookie Nutella" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/nutella.png" alt="Cookie Nutella" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Nutella</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate y relleno de nutella.</p>
@@ -133,7 +111,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.700</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/kinder.webp" alt="Cookie Kinder" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/kinder.png" alt="Cookie Kinder" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Kinder</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate con leche y chips de chocolate blanco, relleno de kinder.</p>
@@ -141,7 +119,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/red-velvet.webp" alt="Cookie Red Velvet" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/red-velvet.png" alt="Cookie Red Velvet" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Red Velvet</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Terciopelo rojo oscuro con chips de chocolate blanco.</p>
@@ -149,7 +127,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/nutella-red-velvet.webp" alt="Cookie Nutella Red Velvet" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/nutella-red-velvet.png" alt="Cookie Nutella Red Velvet" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Nutella Red Velvet</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Terciopelo rojo oscuro con chips de chocolate blanco y relleno de nutella.</p>
@@ -157,7 +135,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.700</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/red-velvet-cream.webp" alt="Cookie Red Velvet Cream" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/red-velvet-cream.png" alt="Cookie Red Velvet Cream" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Red Velvet Cream</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Terciopelo rojo oscuro con chips de chocolate blanco y relleno de cream cheese.</p>
@@ -165,7 +143,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/tricolor.webp" alt="Cookie Tricolor" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/tricolor.png" alt="Cookie Tricolor" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Tricolor</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Combinada de clásica, red velvet y chocolate.</p>
@@ -173,7 +151,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/oreo-clasica.webp" alt="Cookie Oreo Clásica" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/oreo-clasica.png" alt="Cookie Oreo Clásica" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Oreo Clásica</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de oreo con chips de chocolate negro y trozos de galleta oreo.</p>
@@ -181,7 +159,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.100</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/clasica-frambuesas.webp" alt="Cookie Clásica con Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/clasica-frambuesas.png" alt="Cookie Clásica con Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Clásica con Frambuesas</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate negro y chips de chocolate blanco y frambuesas.</p>
@@ -191,14 +169,11 @@
         </div>
       </div>
       <div style="margin-top:clamp(46px,6vw,72px);" data-reveal>
-        <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px;">
-          <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Los rellenos de autor</h3>
-          <p style="margin:0; font-family:'Inter',system-ui,sans-serif; font-size:14.5px; color:#8a6f56;">Cuando queremos mostrar de qué somos capaces.</p>
-        </div>
-        <svg width="132" height="10" viewBox="0 0 132 10" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M2 7c10-8 20-8 30 0s20 8 30 0 20-8 30 0 20 8 38 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Los rellenos de autor</h3>
+        <svg width="140" height="16" viewBox="0 0 140 16" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M4 10c8-8 16-8 24 0s16 8 24 0 16-8 24 0 16 8 24 0 16-8 24 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
         <div style="display:flex; flex-direction:column;">
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px;  border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/ferrero-rocher.webp" alt="Cookie Ferrero Rocher" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/ferrero-rocher.png" alt="Cookie Ferrero Rocher" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Ferrero Rocher</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de chocolate con avellanas, con un centro de nutella y ferrero rocher.</p>
@@ -206,7 +181,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.900</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/cadbury.webp" alt="Cookie Cadbury" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/cadbury.png" alt="Cookie Cadbury" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Cadbury</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de chocolate con relleno de ganache de frutillas y cadbury.</p>
@@ -214,7 +189,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.900</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/mixta-dulce-leche.webp" alt="Cookie Mixta con Dulce de Leche" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/mixta-dulce-leche.png" alt="Cookie Mixta con Dulce de Leche" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Mixta con Dulce de Leche</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Mitad clásica y mitad chocolate con chips de chocolate negro, relleno de dulce de leche y escamas de coco.</p>
@@ -222,7 +197,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.300</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/chocotorta.webp" alt="Cookie Chocotorta" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/chocotorta.png" alt="Cookie Chocotorta" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Chocotorta</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de chocolate y chocolinas con relleno de chocotorta.</p>
@@ -230,7 +205,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.300</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/bon-o-bon.webp" alt="Cookie Bon o Bon" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/bon-o-bon.png" alt="Cookie Bon o Bon" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Bon o Bon</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de chocolate con crocante de maní y relleno de pasta de bon o bon, decorada con líneas de chocolate.</p>
@@ -238,7 +213,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/chocobomba.webp" alt="Cookie Chocobomba" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/chocobomba.png" alt="Cookie Chocobomba" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Chocobomba</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de chocolate rellena con ganache de chocolate y decorada con trozos de chocolate, block blanco y negro.</p>
@@ -246,7 +221,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/birthday.webp" alt="Cookie Birthday" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/birthday.png" alt="Cookie Birthday" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Birthday</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con rocklets y sprinkles de colores.</p>
@@ -254,7 +229,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/praline.webp" alt="Cookie Praliné" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/praline.png" alt="Cookie Praliné" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Praliné</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con almendras y chocolate semi amargo, decorada con una capa de caramelo.</p>
@@ -262,7 +237,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/lemon-pie.webp" alt="Cookie Lemon Pie" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/lemon-pie.png" alt="Cookie Lemon Pie" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Lemon Pie</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de limón con chips de chocolate blanco y relleno curd de limón, decorado con merengue.</p>
@@ -272,14 +247,11 @@
         </div>
       </div>
       <div style="margin-top:clamp(46px,6vw,72px);" data-reveal>
-        <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px;">
-          <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Ediciones especiales</h3>
-          <p style="margin:0; font-family:'Inter',system-ui,sans-serif; font-size:14.5px; color:#8a6f56;">Edición limitada, mientras haya.</p>
-        </div>
-        <svg width="132" height="10" viewBox="0 0 132 10" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M2 7c10-8 20-8 30 0s20 8 30 0 20-8 30 0 20 8 38 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3 style="margin:0; font-family:'Fraunces',Georgia,serif; font-weight:600; font-style:italic; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; color:var(--mud);">Ediciones especiales</h3>
+        <svg width="140" height="16" viewBox="0 0 140 16" aria-hidden="true" style="display:block; margin:8px 0 22px; color:var(--terracotta);"><path d="M4 10c8-8 16-8 24 0s16 8 24 0 16-8 24 0 16 8 24 0 16-8 24 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
         <div style="display:flex; flex-direction:column;">
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px;  border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/pistacho-white.webp" alt="Cookie Pistacho White" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/pistacho-white.png" alt="Cookie Pistacho White" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Pistacho White</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate blanco, pileta de ganache de pistachos y lluvia de pistachos.</p>
@@ -287,7 +259,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$5.500</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/monster.webp" alt="Cookie Monster" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/monster.png" alt="Cookie Monster" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Monster</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con chips de chocolate blanco y negro, trozos de galleta oreo y galleta pepitos.</p>
@@ -295,7 +267,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$3.900</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/pistacho-frambuesas.webp" alt="Cookie Pistacho y Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/pistacho-frambuesas.png" alt="Cookie Pistacho y Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(-3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Pistacho y Frambuesas</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de vainilla con pistachos, frambuesas y chips de chocolate blanco.</p>
@@ -303,7 +275,7 @@
             <span class="mh-row-price" style="flex:0 0 auto; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px; background:var(--paper); border:1.5px solid var(--line); color:var(--terracotta-dark); padding:6px 14px; border-radius:999px; white-space:nowrap;">$4.900</span>
           </div>
           <div class="mh-row" style="display:flex; align-items:center; gap:18px; padding:16px 10px; border-top:1px solid var(--line); border-radius:14px;">
-            <img class="mh-thumb" src="assets/img/cookies/limon-frambuesas.webp" alt="Cookie Limón y Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
+            <img class="mh-thumb" src="assets/img/cookies/limon-frambuesas.png" alt="Cookie Limón y Frambuesas" width="86" height="86" style="flex:0 0 auto; width:78px; height:78px; object-fit:contain; filter:drop-shadow(0 8px 12px rgba(43,24,16,.28)); transform:rotate(3deg);" loading="lazy" />
             <div style="flex:1; min-width:0;">
               <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; color:var(--ink);">Limón y Frambuesas</span>
               <p style="margin:3px 0 0; font-family:'Inter',system-ui,sans-serif; font-size:14px; line-height:1.45; color:#6b5643; max-width:52ch;">Base de limón con frambuesas y chips de chocolate blanco.</p>
@@ -412,6 +384,10 @@
       <nav aria-label="Enlaces del pie" style="display:flex; gap:22px; font-family:'Inter',system-ui,sans-serif; font-weight:600; font-size:14.5px;">
         <a href="#menu" style="text-decoration:none; color:#e9d9c4;" class="mh-nav-link">Mud Cookies</a>
         <a href="#locales" style="text-decoration:none; color:#e9d9c4;" class="mh-nav-link">Locales</a>
+        <a href="https://www.instagram.com/mudhouse.cba/" target="_blank" rel="noopener" style="text-decoration:none; color:#e9d9c4; display:inline-flex; align-items:center; gap:6px;" class="mh-nav-link">
+          <svg width="16" height="16" aria-hidden="true" style="display:block"><use href="#i-ig"></use></svg>
+          Instagram
+        </a>
       </nav>
     </div>
   </footer>

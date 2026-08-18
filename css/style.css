@@ -23,10 +23,6 @@ a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3p
 :focus-visible { outline: 3px solid var(--terracotta-dark); outline-offset: 3px; }
 img { max-width: 100%; }
 
-@keyframes mh-marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
-[data-marquee] { animation: mh-marquee 30s linear infinite; }
-@media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none; } html { scroll-behavior: auto; } }
-
 @keyframes mh-float { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-14px) rotate(var(--r,0deg)); } }
 [data-float] { animation: mh-float 6s ease-in-out infinite; }
 [data-float="slow"] { animation-duration: 8s; animation-delay: .6s; }
@@ -43,6 +39,8 @@ img { max-width: 100%; }
 .mh-nav-link { position: relative; text-decoration: none; }
 .mh-nav-link::after { content:""; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:var(--terracotta); transition: right .22s cubic-bezier(.2,.7,.2,1); }
 .mh-nav-link:hover::after, .mh-nav-link:focus-visible::after { right:0; }
+.mh-ig-btn { transition: border-color .18s ease, color .18s ease, transform .18s ease; }
+.mh-ig-btn:hover, .mh-ig-btn:focus-visible { border-color: var(--terracotta); color: var(--terracotta-dark); transform: translateY(-2px); }
 
 .mh-row { transition: transform .18s ease, background .18s ease; }
 @media (hover: hover) and (pointer: fine) {
