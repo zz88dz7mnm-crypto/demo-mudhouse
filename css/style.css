@@ -1,70 +1,90 @@
-/* Mudhouse Bakery & Coffee — reset, keyframes, estados de interacción y
-   ajustes responsive. La composición vive inline en index.html (una sola
-   fuente de verdad por bloque). Acá queda solo lo que un atributo style
-   no puede expresar: hover, focus, keyframes y media queries. */
+/* Mudhouse Bakery & Coffee — reset, tokens, keyframes, estados de interacción
+   y responsive. La composición vive inline en index.html; acá va lo que un
+   atributo style no puede expresar: variables, hover, focus, keyframes,
+   pseudo-elementos y media queries. */
+
+:root {
+  --ink: #2b1810;
+  --cream: #f7ecd9;
+  --paper: #fffaf2;
+  --terracotta: #d4772f;
+  --terracotta-dark: #b85f1f;
+  --mud: #54302a;
+  --line: #e6d3ab;
+  --shadow-soft: 0 14px 30px -10px rgba(43,24,16,.22);
+  --shadow-lift: 0 22px 44px -14px rgba(43,24,16,.3);
+}
 
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #f6ecdb; color: #1c130d; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
-a { color: #1c130d; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-::selection { background: #c8542c; color: #fff4e6; }
-:focus-visible { outline: 3px solid #1c130d; outline-offset: 3px; }
+a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+::selection { background: var(--terracotta); color: var(--paper); }
+:focus-visible { outline: 3px solid var(--terracotta-dark); outline-offset: 3px; }
 img { max-width: 100%; }
 
 @keyframes mh-marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
-[data-marquee] { animation: mh-marquee 28s linear infinite; }
+[data-marquee] { animation: mh-marquee 30s linear infinite; }
 @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none; } html { scroll-behavior: auto; } }
 
-/* ---------------------------------------------------------------
-   Estados de foco (teclado): siempre activos, en cualquier device.
-   --------------------------------------------------------------- */
-.mh-h1:focus-visible { border-color:#1c130d; }
-.mh-h2:focus-visible { border-color:#1c130d; }
-.mh-h3:focus-visible { border-color:#1c130d; }
-.mh-h4:focus-visible { transform:translate(3px,3px); box-shadow:2px 2px 0 #1c130d; }
-.mh-h5:focus-visible { transform:translate(3px,3px); box-shadow:2px 2px 0 #1c130d; }
-.mh-h6:focus-visible { background:#1c130d; color:#f6ecdb; }
-.mh-h7:focus-visible, .mh-h8:focus-visible { transform:translate(2px,2px); box-shadow:2px 2px 0 #f6ecdb; }
-.mh-h9:focus-visible { border-color:#c8542c; color:#c8542c; }
-.mh-h10:focus-visible, .mh-h11:focus-visible { text-decoration:underline; }
+@keyframes mh-float { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-14px) rotate(var(--r,0deg)); } }
+[data-float] { animation: mh-float 6s ease-in-out infinite; }
+[data-float="slow"] { animation-duration: 8s; animation-delay: .6s; }
+[data-float="fast"] { animation-duration: 5s; animation-delay: .2s; }
+@media (prefers-reduced-motion: reduce) { [data-float] { animation: none; } }
 
 /* ---------------------------------------------------------------
-   Hover: SOLO con mouse real, para no dejar estados "pegados" en touch.
+   Botones y links interactivos
    --------------------------------------------------------------- */
+.mh-btn { transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease; }
+.mh-btn-solid:hover, .mh-btn-solid:focus-visible { transform: translateY(-3px); box-shadow: 0 18px 30px -8px rgba(212,119,47,.55); }
+.mh-btn-outline:hover, .mh-btn-outline:focus-visible { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.mh-btn-dark:hover, .mh-btn-dark:focus-visible { transform: translateY(-3px); box-shadow: 0 18px 30px -10px rgba(0,0,0,.5); }
+.mh-nav-link { position: relative; text-decoration: none; }
+.mh-nav-link::after { content:""; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:var(--terracotta); transition: right .22s cubic-bezier(.2,.7,.2,1); }
+.mh-nav-link:hover::after, .mh-nav-link:focus-visible::after { right:0; }
+
+.mh-row { transition: transform .18s ease, background .18s ease; }
 @media (hover: hover) and (pointer: fine) {
-  a:hover { color: #c8542c; }
-  .mh-h1:hover { border-color:#1c130d; }
-  .mh-h2:hover { border-color:#1c130d; }
-  .mh-h3:hover { border-color:#1c130d; }
-  .mh-h4:hover { transform:translate(3px,3px); box-shadow:2px 2px 0 #1c130d; }
-  .mh-h5:hover { transform:translate(3px,3px); box-shadow:2px 2px 0 #1c130d; }
-  .mh-h6:hover { background:#1c130d; color:#f6ecdb; }
-  .mh-h7:hover, .mh-h8:hover { transform:translate(2px,2px); box-shadow:2px 2px 0 #f6ecdb; }
-  .mh-h9:hover { border-color:#c8542c; color:#c8542c; }
-  .mh-h10:hover, .mh-h11:hover { text-decoration:underline; }
-  .mh-card:hover { transform:translate(-3px,-3px); box-shadow:9px 9px 0 #1c130d; }
+  .mh-row:hover { transform: translateX(6px); background: var(--paper); }
+  .mh-row:hover .mh-thumb { transform: rotate(0deg) scale(1.06) !important; }
 }
-.mh-card { transition: transform .15s ease, box-shadow .15s ease; }
+.mh-thumb { transition: transform .25s ease; }
+
+.mh-loc-card { transition: transform .2s ease, box-shadow .2s ease; }
+@media (hover: hover) and (pointer: fine) {
+  .mh-loc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+}
 
 @media (min-width: 900px) { [data-desktop-nav] { display: flex !important; } }
 
 /* El header es sticky: sin esto, al tocar un link del menú la sección
    salta hasta arriba y el header le tapa el título. */
-section[id] { scroll-margin-top: 92px; }
+section[id] { scroll-margin-top: 100px; }
 
 footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ---------------------------------------------------------------
+   Reveal al scrollear (clase que activa js/main.js)
+   --------------------------------------------------------------- */
+[data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1 !important; transform: none !important; } }
 
 /* ===============================================================
    RESPONSIVE
    =============================================================== */
-@media (max-width: 700px) {
-  #inicio h1 { line-height: 1.15 !important; }
-  #inicio img { max-height: 44vh !important; object-fit: contain !important; }
-  footer nav { gap: 2px 22px !important; flex-wrap: wrap; }
+@media (max-width: 780px) {
+  #inicio .mh-hero-collage { max-height: 320px !important; }
+}
+
+@media (max-width: 640px) {
+  .mh-row { flex-wrap: wrap; }
+  .mh-row-price { margin-left: auto; }
+  footer nav { gap: 4px 20px !important; flex-wrap: wrap; }
   footer > div { justify-content: flex-start !important; gap: 14px !important; }
 }
 
 @media (max-width: 380px) {
-  [data-marquee] > div { font-size: 13px !important; gap: 22px !important; padding-right: 22px !important; }
-  header .mh-h4 { padding: 11px 14px !important; font-size: 14px !important; }
+  [data-marquee] > div { font-size: 12.5px !important; gap: 18px !important; padding-right: 18px !important; }
 }
